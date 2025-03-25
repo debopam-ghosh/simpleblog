@@ -1,1 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Flask Blog{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Blog</h1>
+
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <small>By {{ post.author }}</small>
+        </div>
+    {% endfor %}
+{% endblock %}
 
